@@ -1,0 +1,27 @@
+---
+apiVersion: v2
+appVersion: 1.30.0.6486-629d58034 
+description: Plex Media Server
+name: plex
+version: 6.4.4
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - plex
+  - plex-media-server
+home: https://github.com/gmcmillan82/helm-charts/tree/master/charts/apps/plex
+icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+sources:
+  - https://github.com/gmcmillan82/charts/tree/master/charts/apps/plex
+  #- https://github.com/k8s-at-home/container-images/
+maintainers:
+  - name: Graham McMillan 
+    email: gmcmillan@proton.me 
+dependencies:
+  - name: common
+    #repository: https://library-charts.k8s-at-home.com
+    repository: file://../../library/common
+    version: 1.2.0
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2
