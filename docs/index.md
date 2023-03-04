@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the documentation for the [bjw-s Helm charts](https://github.com/bjw-s/helm-charts) project.
+Welcome to the documentation for the [bjw-s Helm charts](https://github.com/gmcmillan82/helm-charts) project.
 
 ## Getting started
 
