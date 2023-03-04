@@ -1,32 +1,50 @@
-name: Release Chart
+
+
+name: Release Charts
+
+# Only releases to gh-pages branch
 on:
   push:
     branches:
       - main
+
 jobs:
-  release-chart:
+  release:
+    # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
+    # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Set up Helm
-        uses: azure/setup-helm@v3
-      - name: Install chart dependencies
-        run: |
-          helm dependency update charts/library/common
-          helm dependency update charts/apps/plex
-          helm dependency update charts/other/app-template
-      - name: Package library charts
-        run: helm package charts/library/common
-      - name: Package application charts
-        run: helm package charts/apps/plex
-      - name: Package other charts
-        run: helm package charts/other/app-template
-      - name: Chart Releaser Action
-        uses: helm/chart-releaser-action@v1.5.0
-        env: 
-          CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          charts_dir: charts
-          index: true
-          push: true
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+
+      - name: Run chart-releaser for library charts
+        uses: helm/chart-releaser-action@v1.5.0
+        with:
+          charts_dir: charts/library
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Run chart-releaser for app charts
+        uses: helm/chart-releaser-action@v1.5.0
+        with:
+          charts_dir: charts/apps
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Run chart-releaser for other charts
+        uses: helm/chart-releaser-action@v1.5.0
+        with:
+          charts_dir: charts/other
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
