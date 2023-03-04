@@ -31,6 +31,5 @@ jobs:
         with:
           chart_path: charts/library/common
           index: true
-          charts_repo_url: https://gmcmillan82.github.io/helm-charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
