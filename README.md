@@ -1,2 +1,2 @@
 # helm-charts
-A collection of my Helm charts
+A collection of Helm charts
