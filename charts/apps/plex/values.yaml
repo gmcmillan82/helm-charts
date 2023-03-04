@@ -9,7 +9,7 @@ image:
   # -- image repository
   repository: ghcr.io/onedr0p/plex
   # @default -- chart.appVersion
-  tag:
+  tag: 1.31.1.6733-bc0674160
   # -- image pull policy
   pullPolicy: IfNotPresent
 
