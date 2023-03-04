@@ -13,9 +13,9 @@ jobs:
         uses: azure/setup-helm@v3
       - name: Install chart dependencies
         run: |
-          helm dependency update charts/library
-          helm dependency update charts/apps
-          helm dependency update charts/other
+          helm dependency update charts/library/common
+          helm dependency update charts/apps/plex
+          helm dependency update charts/other/app-template
       - name: Package library charts
         run: helm package charts/library
       - name: Package application charts
