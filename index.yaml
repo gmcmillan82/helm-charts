@@ -1,0 +1,33 @@
+apiVersion: v1
+entries:
+  common:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: fixed
+          description: Fixed sectionName not being optional for gateway routes
+        - kind: fixed
+          description: Fixed primary gateway route having incorrect name
+        - kind: fixed
+          description: Fixed invalid persistence type message
+        - kind: added
+          description: Added cronjob as controller.type
+        - kind: added
+          description: Allow setting container restartPolicy
+    apiVersion: v2
+    created: "2023-03-04T14:26:55.759318611Z"
+    description: Function library for Helm charts
+    digest: 14ce6f4de4a392aa108eddbd03c06fb429b50a5b513f2241028a61687e3b25ab
+    home: https://github.com/gmcmillan82/helm-charts/tree/main/charts/library/common
+    keywords:
+    - common
+    - library
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: gmcmillan@proton.me
+      name: Graham McMillan
+    name: common
+    type: library
+    urls:
+    - https://github.com/gmcmillan82/helm-charts/releases/download/common-1.2.0/common-1.2.0.tgz
+    version: 1.2.0
+generated: "2023-03-04T14:26:55.759330911Z"
