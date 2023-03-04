@@ -17,11 +17,11 @@ jobs:
           helm dependency update charts/apps/plex
           helm dependency update charts/other/app-template
       - name: Package library charts
-        run: helm package charts/library
+        run: helm package charts/library/common
       - name: Package application charts
-        run: helm package charts/apps
+        run: helm package charts/apps/plex
       - name: Package other charts
-        run: helm package charts/other
+        run: helm package charts/other/app-template
       - name: Chart Releaser Action
         uses: helm/chart-releaser-action@v1.5.0
         with:
