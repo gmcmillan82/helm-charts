@@ -24,8 +24,8 @@ jobs:
         run: helm package charts/other/app-template
       - name: Chart Releaser Action
         uses: helm/chart-releaser-action@v1.5.0
+        env: ${{ secrets.CR_TOKEN }}
         with:
           charts_dir: charts
-          token: ${{ secrets.CR_TOKEN }}
           index: true
           push: true
