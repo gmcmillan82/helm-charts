@@ -1,5 +1,6 @@
 name: Release Charts
 
+# Only releases to gh-pages branch
 on:
   push:
     branches:
