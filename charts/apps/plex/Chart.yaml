@@ -12,7 +12,6 @@ home: https://github.com/gmcmillan82/helm-charts/tree/master/charts/apps/plex
 icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
 sources:
   - https://github.com/gmcmillan82/charts/tree/master/charts/apps/plex
-  #- https://github.com/k8s-at-home/container-images/
 maintainers:
   - name: Graham McMillan 
     email: gmcmillan@proton.me 
