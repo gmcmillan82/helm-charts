@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 1.31.1.6733-bc0674160
 description: Plex Media Server
 name: plex
-version: 6.4.5
+version: 6.4.6
 kubeVersion: ">=1.16.0-0"
 keywords:
   - plex
