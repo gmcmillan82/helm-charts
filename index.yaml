@@ -117,6 +117,34 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 1.31.1.6733-bc0674160
+    created: "2023-03-05T20:51:48.255733194Z"
+    dependencies:
+    - name: common
+      repository: file://../../library/common
+      version: 1.2.1
+    description: Plex Media Server
+    digest: 3f498c3fb4861459b58a74e55b0713c57bc85b1b05ace4c1c79d8bee9b10f85f
+    home: https://github.com/gmcmillan82/helm-charts/tree/master/charts/apps/plex
+    icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: gmcmillan@proton.me
+      name: Graham McMillan
+    name: plex
+    sources:
+    - https://github.com/gmcmillan82/charts/tree/master/charts/apps/plex
+    urls:
+    - https://github.com/gmcmillan82/helm-charts/releases/download/plex-6.4.6/plex-6.4.6.tgz
+    version: 6.4.6
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 1.31.1.6733-bc0674160
     created: "2023-03-04T15:11:11.272274318Z"
     dependencies:
     - name: common
@@ -139,4 +167,4 @@ entries:
     urls:
     - https://github.com/gmcmillan82/helm-charts/releases/download/plex-6.4.5/plex-6.4.5.tgz
     version: 6.4.5
-generated: "2023-03-05T20:47:26.205599754Z"
+generated: "2023-03-05T20:51:48.255746894Z"
