@@ -18,7 +18,7 @@ maintainers:
 dependencies:
   - name: common
     # repository: https://github.com/gmcmillan82/helm-charts/main/charts/library/common
-    repository: file://../charts/common
+    repository: https://gmcmillan82.github.io/helm-charts
     version: 1.2.1
 annotations:
   artifacthub.io/changes: |-
