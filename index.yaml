@@ -26,6 +26,31 @@ entries:
     urls:
     - https://github.com/gmcmillan82/helm-charts/releases/download/app-template-1.2.1/app-template-1.2.1.tgz
     version: 1.2.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: |
+            Updated library version to 1.2.0.
+          links:
+            - name: Common library chart definition
+              url: https://github.com/bjw-s/helm-charts/blob/main/charts/library/common/Chart.yaml
+    apiVersion: v2
+    created: "2023-03-05T20:44:27.728686632Z"
+    dependencies:
+    - name: common
+      repository: file://../../library/common
+      version: 1.2.0
+    description: A common powered chart template. This can be useful for small projects
+      that don't have their own chart.
+    digest: c3e483582a543b6fbc517e1b37a0d18ddfabae8f54cdffb357feb6c4c30ae76d
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: app-template
+    urls:
+    - https://github.com/gmcmillan82/helm-charts/releases/download/app-template-1.2.0/app-template-1.2.0.tgz
+    version: 1.2.0
   common:
   - annotations:
       artifacthub.io/changes: |-
@@ -85,4 +110,4 @@ entries:
     urls:
     - https://github.com/gmcmillan82/helm-charts/releases/download/plex-6.4.5/plex-6.4.5.tgz
     version: 6.4.5
-generated: "2023-03-05T20:42:41.702218747Z"
+generated: "2023-03-05T20:44:27.728699633Z"
