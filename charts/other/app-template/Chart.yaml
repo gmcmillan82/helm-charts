@@ -2,7 +2,7 @@
 apiVersion: v2
 description: A common powered chart template. This can be useful for small projects that don't have their own chart.
 name: app-template
-version: 1.2.1
+version: 1.2.0
 kubeVersion: ">=1.22.0-0"
 maintainers:
   - name: bjw-s
