@@ -18,8 +18,7 @@ maintainers:
     email: gmcmillan@proton.me 
 dependencies:
   - name: common
-    #repository: https://library-charts.k8s-at-home.com
-    repository: file://../../library/common
+    repository: https://github.com/gmcmillan82/helm-charts/main/charts/library/common
     version: 1.2.0
 annotations:
   artifacthub.io/changes: |-
